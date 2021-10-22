@@ -10,6 +10,7 @@
                     <b-tab title="ขอคำอธิษฐาน" active>
                         <div class="row p-5">
                             <pray-for-card
+                                class="col-4"
                                 v-for="item in prays"
                                 :key="item.title"
                                 :title="item.title"
