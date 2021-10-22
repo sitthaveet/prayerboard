@@ -1,10 +1,14 @@
 <template>
-  <nav class="navbar navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <a class="navbar-brand" href="#">
-      <img src="/docs/4.1/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="">
+      <img src="../assets/logo.png" width="30" height="30" alt="">
     </a>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
             <a class="nav-link" href="#">หน้าแรก</a>
           </li>
@@ -15,11 +19,11 @@
             <a class="nav-link" href="#">ถาม-ตอบ</a>
           </li>
           <li class="nav-item">
-            <button class="btn btn-outline-success my-2 my-sm-0">สร้างกระดานใหม่</button>
+            <button class="btn btn-primary my-2 my-sm-0 text-white">สร้างกระดานใหม่</button>
           </li>
         </ul>
       </div>
-    </nav>
+  </nav>
 </template>
 
 <script>
