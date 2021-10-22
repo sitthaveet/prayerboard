@@ -1,12 +1,19 @@
 <template>
-    <div></div>
+    <header-custom/>
 </template>
 
 <script>
+  import Header from '../components/Header.vue';
+
   export default {
-    name: "HomePage"
+    name: "HomePage",
+    components: {
+      HeaderCustom: Header,
+    }
   }
 </script>
+
+
 
 <style scoped>
 
