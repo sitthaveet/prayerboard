@@ -1,3 +1,5 @@
+@import "./font.scss";
+
 html {
   box-sizing: border-box;
 }
@@ -6,11 +8,11 @@ html {
 *:before,
 *:after {
   box-sizing: inherit;
+  font-family: Prompt;
 }
 
 body {
   background: #ebebeb;
-  font-family: "Open Sans", sans-serif;
   font-size: 18px;
   margin: 0;
 }
