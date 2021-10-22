@@ -1,5 +1,5 @@
 <template>
-    <section class="col-4" style="margin-bottom: 20px">
+    <section style="margin-bottom: 20px">
         <div class="pray-for">
             <h3>"{{title}}"</h3>
             <p>{{desc}}</p>
