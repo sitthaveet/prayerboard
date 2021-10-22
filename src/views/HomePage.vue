@@ -1,5 +1,14 @@
 <template>
+
+  <div>
     <header-custom/>
+
+    <!-- https://codingyaar.com/bootstrap-4-carousel-multiple-items-responsive/ -->
+
+  </div>
+
+
+
 </template>
 
 <script>
