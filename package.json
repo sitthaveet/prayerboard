@@ -1,5 +1,5 @@
 {
-  "name": "vue-sticky-notes",
+  "name": "prayerboard",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -12,6 +12,7 @@
     "bootstrap-vue": "^2.13.0",
     "bulma": "^0.8.2",
     "core-js": "^3.6.4",
+    "lodash": "^4.17.21",
     "uuid": "^8.0.0",
     "vue": "^2.6.11",
     "vue-router": "^3.5.2"

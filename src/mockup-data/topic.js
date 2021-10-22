@@ -1,4 +1,4 @@
-export const TOPIC = [
+export const TOPICS = [
   {
     id: 1,
     name: "เหนื่อยกับการมีชีวิต"
