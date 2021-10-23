@@ -1,10 +1,10 @@
 <template>
     <b-popover target="popover-create" title="" placement="bottom" class="p-4">
       <button class="btn btn-custom-yellow2 m-3 text-white">
-              <span style="font-size:1.5em; margin-top:-.2em; position: absolute">+</span> &nbsp;&nbsp;&nbsp;ต้องการคำอธิษฐานเผื่อ
+              <span>+</span> &nbsp;&nbsp;&nbsp;ต้องการคำอธิษฐานเผื่อ
        </button>
        <button class="btn btn-custom-primary mx-3 mb-3 text-white">
-              <span style="font-size:1.5em; margin-top:-.2em; position: absolute">+</span> &nbsp;&nbsp;&nbsp;สร้างคำถามใหม่
+              <span>+</span> &nbsp;&nbsp;&nbsp;สร้างคำถามใหม่
        </button>
     </b-popover>
 </template>
