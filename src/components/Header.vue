@@ -1,8 +1,10 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark header fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="/">
-        <img src="../assets/logo.png" width="153" height="60" alt="logo" />
+      <a class="navbar-brand" href="#">
+        <img src="../assets/logo.png" width="60" height="69" alt="" />
+        <!-- <div class="mock-icon"></div> -->
+        <p class="web-title">hristSpace</p>
       </a>
       <button
         class="navbar-toggler"
@@ -63,7 +65,7 @@ export default {
   }
   
   .navbar-brand {
-    padding: 0.6em 0px 0.7em 0px;
+    padding: 0.6em 0px 0.4em 0px;
   }
   
   .navbar-dark {
@@ -78,12 +80,14 @@ export default {
   
   a.navbar-brand .web-title {
     position: absolute;
-    margin-left: 1.5em;
-    margin-top: -1.6em;
+    margin-left: 2em;
+    margin-top: -2.2em;
     font-size: 1.2em;
-    /* font-family: Promt; */
-    font-weight: 200;
+    /* font-family: 'Promt'; */
+    font-weight: 400;
+    letter-spacing: 1px;
     color: white;
+    text-shadow: 1px 2px 0px black;
   }
   
   #navbarSupportedContent {
