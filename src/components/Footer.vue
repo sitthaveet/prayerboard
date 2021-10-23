@@ -33,7 +33,7 @@
             alt="logo"
           />
           <p>
-            <span class="font-weight-bold text-primary">Christ Space</span>
+            <span class="font-weight-bold text-primary ml-n4">Christ Space</span>
             พื้นที่ปลอดภัยสำหรับคริสเตียน
           </p>
         </div>

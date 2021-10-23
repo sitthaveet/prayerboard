@@ -22,6 +22,7 @@
                     </b-tab>
                 </b-tabs>
             </div>
+            
         <footer-custom />
     </div>
     
