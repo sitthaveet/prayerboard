@@ -11,6 +11,12 @@
   padding: 0.6em 0px 0.7em 0px;
 }
 
+.navbar-toggler {
+    color: white;
+    background-color: white;
+    z-index:999;
+}
+
 .mock-icon {
   width: 60px;
   height: 60px;
@@ -42,22 +48,27 @@ a.navbar-brand .web-title {
 
 .nav-item .nav-link {
     color: white;
+    background-image: linear-gradient(to right, white, white);
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    background-size: 0% 4px;
+    transition: background-size .5s ease;
     // transition: .3s;
 }
 
 .nav-item.active .nav-link {
-    border-bottom: 4px solid white;
+    background-size: 100% 4px;
 }
 
 .nav-item:hover .nav-link {
-    border-bottom: 4px solid white;
+    background-size: 100% 4px;
 }
 
 .btn-custom-yellow {
   background-color: #f9a93e;
   border: #18191f solid 2px;
   border-radius: 0.6em;
-  transition: .4s;
+  transition: .3s;
 }
 
 .btn-custom-yellow:hover {
