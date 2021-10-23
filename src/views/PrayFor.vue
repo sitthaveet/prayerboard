@@ -19,6 +19,7 @@
             class="create-pray-for"
             :src="require('../assets/hack/create_pray_for.png')"
         />
+      <footer-custom />
     </section>
 </template>
 
@@ -26,11 +27,13 @@
   import PrayForCard from '../components/PrayForCard'
   import {PRAYS} from "../mockup-data/prayfor";
   import Header from '../components/Header.vue';
+  import Footer from '../components/Footer.vue';
   export default {
     name: "PrayFor",
     components: {
       PrayForCard: PrayForCard,
-      HeaderCustom: Header
+      HeaderCustom: Header,
+      FooterCustom: Footer,
     },
     data() {
       return {

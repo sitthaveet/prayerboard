@@ -22,7 +22,9 @@
                     </b-tab>
                 </b-tabs>
             </div>
+        <footer-custom />
     </div>
+    
 </template>
 
 <script>
@@ -30,12 +32,14 @@
     import PrayForCard from '../components/PrayForCard'
     import {PRAYS} from "../mockup-data/prayfor";
     import Header from '../components/Header.vue';
+    import Footer from '../components/Footer.vue';
   export default {
     name: "Forums",
     components: {
         Question: Question,
         PrayForCard: PrayForCard,
         HeaderCustom: Header,
+        FooterCustom: Footer,
     },
     data() {
       return {

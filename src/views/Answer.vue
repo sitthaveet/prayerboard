@@ -96,13 +96,16 @@
 
             </div>
         </div>
+        <footer-custom />
     </section>
+    
 </template>
 
 <script>
   import {QUESTIONS} from "../mockup-data/question";
   import Button from '../components/Button';
   import Header from '../components/Header.vue';
+  import Footer from '../components/Footer.vue';
   export default {
     name: "Answer",
     data() {
@@ -132,7 +135,8 @@
     },
     components: {
       ButtonCustom: Button,
-      HeaderCustom: Header
+      HeaderCustom: Header,
+      FooterCustom: Footer,
     }
   }
 </script>

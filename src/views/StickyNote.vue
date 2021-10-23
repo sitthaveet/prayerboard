@@ -31,7 +31,7 @@
                 </div>
             </div>
         </div>
-
+      <footer-custom />
     </div>
 </template>
 
@@ -39,6 +39,7 @@
   import NoteEditor from '../components/NoteEditor.vue';
   import {PRAYS} from "../mockup-data/prayfor";
   import Header from '../components/Header.vue';
+  import Footer from '../components/Footer.vue';
 
   export default {
     name: 'StickyNote',
@@ -133,7 +134,8 @@
     },
     components: {
       appNoteEditor: NoteEditor,
-      HeaderCustom: Header
+      HeaderCustom: Header,
+      FooterCustom: Footer,
     }
   }
 </script>
