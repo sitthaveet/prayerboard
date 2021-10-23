@@ -72,6 +72,14 @@ body {
 }
 // .end เอาไว้ test การวาง CSS เฉยๆครับ
 
+.mock-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 2em;
+  background-image: linear-gradient(120deg, #efb20c, rgba(0, 0, 0, 0.2));
+  opacity: 0.5;
+}
+
 ::placeholder {
   color: #ccc;
   font-size: 15px;
