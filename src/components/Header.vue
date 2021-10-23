@@ -31,7 +31,7 @@
             <a class="nav-link" @click="onClickQuestion">ถาม-ตอบ</a>
           </li>
           <li class="nav-item">
-            <button class="btn btn-custom-yellow my-2 my-sm-0 text-white">
+            <button id="popover-create" class="btn btn-custom-yellow my-2 my-sm-0 text-white" >
               สร้างกระดานใหม่
             </button>
           </li>
@@ -50,7 +50,7 @@ export default {
   },
   methods: {
      onClickHome() {
-        this.$router.push({path: ''})
+        this.$router.push({path: '/'})
      },
      onClickPrayFor() {
         this.$router.push({path: 'prayfor'})
