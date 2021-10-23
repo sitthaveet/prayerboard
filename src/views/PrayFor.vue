@@ -87,6 +87,7 @@
         prays: [],
         show: false,
         theme: '#FFF3F8',
+        title: '',
         editing: '',
         text: '',
         name: ''

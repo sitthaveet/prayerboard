@@ -31,7 +31,38 @@
         <img
             class="create-question"
             :src="require('../assets/hack/create_question.png')"
+            @click="show = true"
         />
+        <b-modal v-model="show" hide-footer hide-header>
+            <div class="note-editor" style="margin: 0; background: #f9a93e; width: 700px">
+                <div style="width: 80%">
+                    <h4>สร้างประเด็นคำถามใหม่</h4>
+                </div>
+                <img
+                    style="position: absolute; top: 10px; right: 10px; cursor: pointer"
+                    :src="require('../assets/icons/close.png')"
+                    @click="show = false"
+                />
+                <hr>
+                <input class="title-input border-input" type="text" v-model="title" placeholder="หัวข้อคำถาม">
+                <textarea class="border-input" rows="4" v-model="text" placeholder="พิมพ์คำถามของคุณได้ที่นี่"></textarea>
+                <input class="title-input border-input" type="text" v-model="name" placeholder="ใส่ชื่อของคุณ" style="width: 200px">
+
+                <div class="btn-submit" style="align-self: center; margin: 40px 0">
+                    <div style="width: 160px">
+                        <button-custom
+                            style="background: #397490; color: white;"
+                            name="+ สร้างคำถามใหม่"
+                            :onClick="createNew"
+                        />
+                    </div>
+                </div>
+                <img
+                    class="question-image"
+                    :src="require('../assets/icons/question.png')"
+                />
+            </div>
+        </b-modal>
     </section>
 </template>
 
@@ -40,6 +71,7 @@
   import {TOPICS} from "../mockup-data/topic";
   import QuestionCard from '../components/QuestionCard'
   import Header from '../components/Header.vue';
+  import Button from '../components/Button';
 
   export default {
     name: "Question",
@@ -48,7 +80,11 @@
         questions: [],
         questionsAll: [],
         topics: [],
-        idSelected: null
+        idSelected: null,
+        show: false,
+        title: '',
+        text: '',
+        name: ''
       }
     },
     mounted() {
@@ -64,11 +100,34 @@
         }
         this.idSelected = id;
         this.questions = [...this.questionsAll.filter(question => question.topics.find(topic => topic.id === id))];
+      },
+      createNew() {
+        this.questions.push({
+          id: Math.floor(Math.random() * 100),
+          title: this.title,
+          desc: this.text,
+          by: this.name,
+          avatar: require("../assets/avatar/avatar-1.png"),
+          like_count: 0,
+          comments: [],
+          topics: [
+            {
+              id: 1,
+              name: "เหนื่อยกับการมีชีวิต",
+              color: "#CEECC9",
+            }
+          ],
+        });
+        this.title = '';
+        this.text = '';
+        this.name = '';
+        this.show = false;
       }
     },
     components: {
       QuestionCard: QuestionCard,
       HeaderCustom: Header,
+      ButtonCustom: Button
     }
   }
 </script>
@@ -91,5 +150,17 @@
         right: 20px;
         bottom: 30px;
         cursor: pointer;
+    }
+    .border-input {
+        border-radius: 10px;
+        border: 1px solid grey;
+        padding-left: 20px !important;
+        margin-bottom: 15px;
+    }
+    .question-image {
+        width: 100px;
+        position:  absolute;
+        bottom: 20px;
+        right: 20px;
     }
 </style>
