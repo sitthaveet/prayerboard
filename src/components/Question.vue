@@ -1,5 +1,6 @@
 <template>
     <section class="question">
+        <header-custom/>
         <h4>ถาม-ตอบ</h4>
         <div class="row" style="margin-top: 40px">
             <div
@@ -38,6 +39,7 @@
   import {QUESTIONS} from "../mockup-data/question";
   import {TOPICS} from "../mockup-data/topic";
   import QuestionCard from '../components/QuestionCard'
+  import Header from '../components/Header.vue';
 
   export default {
     name: "Question",
@@ -65,14 +67,16 @@
       }
     },
     components: {
-      QuestionCard: QuestionCard
+      QuestionCard: QuestionCard,
+      HeaderCustom: Header,
     }
   }
 </script>
 
 <style lang="scss" scoped>
     .question {
-        padding: 100px
+        padding: 100px;
+        padding-top: 0;
     }
     .topic {
         padding: 10px 20px 10px 20px;

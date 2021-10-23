@@ -1,5 +1,6 @@
 <template>
     <div id="app">
+        <header-custom/>
         <div class="row" style="padding: 50px">
             <div class="note col-6" :style="{'background-color': currentNote.theme}">
                 <h3>"{{currentNote.title}}"</h3>
@@ -30,13 +31,15 @@
                 </div>
             </div>
         </div>
-
+      <footer-custom />
     </div>
 </template>
 
 <script>
   import NoteEditor from '../components/NoteEditor.vue';
   import {PRAYS} from "../mockup-data/prayfor";
+  import Header from '../components/Header.vue';
+  import Footer from '../components/Footer.vue';
 
   export default {
     name: 'StickyNote',
@@ -131,6 +134,8 @@
     },
     components: {
       appNoteEditor: NoteEditor,
+      HeaderCustom: Header,
+      FooterCustom: Footer,
     }
   }
 </script>

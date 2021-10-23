@@ -21,16 +21,16 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav">
-          <router-link tag="li" class="nav-item" :to="{ path: '/' }">
-            <a class="nav-link" href="/">หน้าแรก</a>
-          </router-link>
-          <router-link tag="li" class="nav-item" :to="{path: 'forums', query: { id: this.id }}">
-            <a class="nav-link" href="#" @click="onClickForums">ขอคำอธิษฐาน</a>
-          </router-link>
-          <router-link tag="li" class="nav-item" :to="{path: 'forums', query: { id: this.id }}">
-            <a class="nav-link" href="#" @click="onClickForums">ถาม-ตอบ</a>
-          </router-link>
-          <li class="nav-item" id="popover-create" variant="primary">
+          <li class="nav-item active">
+            <a class="nav-link" @click="onClickHome">หน้าแรก</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" @click="onClickPrayFor">ขอคำอธิษฐาน</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" @click="onClickQuestion">ถาม-ตอบ</a>
+          </li>
+          <li class="nav-item">
             <button class="btn btn-custom-yellow my-2 my-sm-0 text-white">
               สร้างกระดานใหม่
             </button>
@@ -49,9 +49,15 @@ export default {
     };
   },
   methods: {
-     onClickForums() {
-        this.$router.push({path: 'forums', query: { id: this.id }})
-      },
+     onClickHome() {
+        this.$router.push({path: ''})
+     },
+     onClickPrayFor() {
+        this.$router.push({path: 'prayfor'})
+     },
+     onClickQuestion() {
+        this.$router.push({path: 'question'})
+     },
   },
   computed: {
     currentRouteName() {
@@ -114,6 +120,7 @@ export default {
       background-position: bottom left;
       background-repeat: no-repeat;
       background-size: 0% 4px;
+      cursor: pointer;
       transition: background-size .5s ease;
       /* transition: .3s; */
   }
