@@ -4,18 +4,24 @@
     <header-custom/>
 
     <div class="container">
-    <div class="row p-1 my-5">
-      <carousel :perPageCustom="[[768, 3], [1024, 4]]">
-        <slide v-for="item in prays" :key="item.title">
-          <pray-for-card
-              class="col-lg-4"
-              :title="item.title"
-              :desc="item.desc"
-              :by="item.by"
-          />
-        </slide>
-      </carousel>
-    </div>
+
+      <div class="row">
+        <div class="col-lg-4"><h2>อยากให้อธิษฐานเผื่อหน่อย</h2></div>
+        <div class="col-lg-4 offset-lg-4"><a href="#">ดูทั้งหมด ></a></div>
+      </div>
+      
+      <div class="row p-1 my-5">
+        <carousel :perPageCustom="[[768, 3], [1024, 4]]">
+          <slide v-for="item in prays" :key="item.title">
+            <pray-for-card
+                class="col-lg-4"
+                :title="item.title"
+                :desc="item.desc"
+                :by="item.by"
+            />
+          </slide>
+        </carousel>
+      </div>
   </div>
   </div>
 
