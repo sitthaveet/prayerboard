@@ -51,8 +51,12 @@
     },
     methods: {
       onTopicSelected(id) {
+        if (id === this.idSelected) {
+          this.questions = [...this.questionsAll];
+          return
+        }
         this.idSelected = id;
-        this.questions = [...this.questionsAll.filter(question => question.topic === id)];
+        this.questions = [...this.questionsAll.filter(question => question.topics.find(topic => topic.id === id))];
       }
     },
     components: {
