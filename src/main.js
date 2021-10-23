@@ -7,6 +7,7 @@ import "bootstrap-vue/dist/bootstrap-vue.css";
 import "./styles/global.scss";
 import "./styles/header.scss";
 import "./styles/footer.scss";
+import VueCarousel from "vue-carousel";
 
 Vue.config.productionTip = false;
 
@@ -14,6 +15,8 @@ Vue.config.productionTip = false;
 Vue.use(BootstrapVue);
 // Optionally install the BootstrapVue icon components plugin
 Vue.use(IconsPlugin);
+// Use Carousel cards in project
+Vue.use(VueCarousel);
 
 new Vue({
   router,
