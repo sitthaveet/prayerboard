@@ -57,6 +57,20 @@ body {
   background: $purple;
 }
 
+// .start เอาไว้ test การวาง CSS เฉยๆครับ
+.red-box {
+  border: 1px solid red;
+}
+
+.yellow-box {
+  border: 1px solid yellow;
+}
+
+.blue-box {
+  border: 1px solid blue;
+}
+// .end เอาไว้ test การวาง CSS เฉยๆครับ
+
 ::placeholder {
   color: #ccc;
   font-size: 15px;
