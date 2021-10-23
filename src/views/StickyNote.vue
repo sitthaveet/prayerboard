@@ -121,6 +121,7 @@
     mounted() {
       const id = this.$route.query.id;
       this.currentNote = PRAYS.find(pray => pray.id === +id);
+      this.notes = this.currentNote.comments;
       // if (localStorage.getItem('notes')) this.notes = JSON.parse(localStorage.getItem('notes'));
     },
     watch: {
