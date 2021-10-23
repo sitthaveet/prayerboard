@@ -1,10 +1,8 @@
 <template>
   <nav class="navbar navbar-expand-lg header fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">
-        <!-- <img src="../assets/logo.png" width="60" height="60" alt="" /> -->
-        <div class="mock-icon"></div>
-        <p class="web-title">Name Product</p>
+      <a class="navbar-brand" href="/">
+        <img src="../assets/logo.png" width="153" height="60" alt="logo" />
       </a>
       <button
         class="navbar-toggler"
@@ -17,17 +15,16 @@
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" href="#">หน้าแรก</a>
+            <a class="nav-link" href="/">หน้าแรก</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">ขอคำอธิษฐาน</a>
+            <a class="nav-link" href="#" @click="onClickForums">ขอคำอธิษฐาน</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">ถาม-ตอบ</a>
+            <a class="nav-link" href="#" @click="onClickForums">ถาม-ตอบ</a>
           </li>
           <li class="nav-item">
             <button class="btn btn-custom-yellow my-2 my-sm-0 text-white">
@@ -46,6 +43,11 @@ export default {
     return {
       category: "",
     };
+  },
+  methods: {
+     onClickForums() {
+        this.$router.push({path: 'forums', query: { id: this.id }})
+      },
   },
 };
 </script>
