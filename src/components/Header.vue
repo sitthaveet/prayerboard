@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-lg header fixed-top">
     <div class="container">
       <a class="navbar-brand" href="#">
-        <!-- <img src="../assets/logo.png" width="50" height="50" alt="" /> -->
+        <!-- <img src="../assets/logo.png" width="60" height="60" alt="" /> -->
         <div class="mock-icon"></div>
         <p class="web-title">Name Product</p>
       </a>
