@@ -30,11 +30,6 @@
     import PrayForCard from '../components/PrayForCard'
     import {PRAYS} from "../mockup-data/prayfor";
     import Header from '../components/Header.vue';
-
-   
-
-
-
   export default {
     name: "Forums",
     components: {

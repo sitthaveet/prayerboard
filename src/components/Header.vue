@@ -20,13 +20,13 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" href="/">หน้าแรก</a>
+            <a class="nav-link" @click="onClickHome">หน้าแรก</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" @click="onClickForums">ขอคำอธิษฐาน</a>
+            <a class="nav-link" @click="onClickPrayFor">ขอคำอธิษฐาน</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" @click="onClickForums">ถาม-ตอบ</a>
+            <a class="nav-link" @click="onClickQuestion">ถาม-ตอบ</a>
           </li>
           <li class="nav-item">
             <button class="btn btn-custom-yellow my-2 my-sm-0 text-white">
@@ -47,9 +47,15 @@ export default {
     };
   },
   methods: {
-     onClickForums() {
-        this.$router.push({path: 'forums', query: { id: this.id }})
-      },
+     onClickHome() {
+        this.$router.push({path: ''})
+     },
+     onClickPrayFor() {
+        this.$router.push({path: 'prayfor'})
+     },
+     onClickQuestion() {
+        this.$router.push({path: 'question'})
+     },
   },
 };
 </script>

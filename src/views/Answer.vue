@@ -1,5 +1,6 @@
 <template>
     <section class="answer-container">
+        <header-custom/>
         <div class="question background-primary">
             <h3>{{currentQuestion.title}}</h3>
             <p style="margin-bottom: 200px; margin-top: 40px">{{currentQuestion.desc}}</p>
@@ -100,7 +101,8 @@
 
 <script>
   import {QUESTIONS} from "../mockup-data/question";
-  import Button from '../components/Button'
+  import Button from '../components/Button';
+  import Header from '../components/Header.vue';
   export default {
     name: "Answer",
     data() {
@@ -129,7 +131,8 @@
       }
     },
     components: {
-      ButtonCustom: Button
+      ButtonCustom: Button,
+      HeaderCustom: Header
     }
   }
 </script>
