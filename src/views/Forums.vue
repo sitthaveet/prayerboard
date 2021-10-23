@@ -1,9 +1,7 @@
 <template>
 
-    <div id="example">
+    <div>
         <header-custom/>
-
-            
 
             <div class="forums" style="margin-top: 40px">
                 <b-tabs content-class="mt-3">
@@ -32,33 +30,17 @@
     import PrayForCard from '../components/PrayForCard'
     import {PRAYS} from "../mockup-data/prayfor";
     import Header from '../components/Header.vue';
-    import { Carousel, Slide } from 'vue-carousel';
 
-    const buildSlideMarkup = (count) => {
-	let slideMarkup = '';
-    for (var i = 1; i <= count; i++) {
-        slideMarkup += '<slide><span class="label">' + i + '</span></slide>'
-    }
-    return slideMarkup;
-    };
-
-    new Vue({
-        el: '#example',
-    components: {
-        'carousel': VueCarousel.Carousel,
-        'slide': VueCarousel.Slide
-    },
-    template: '<div><carousel :perPageCustom="[[480, 2], [768, 3]]">' + buildSlideMarkup(10) + '</carousel></div>'
-    });
+   
 
 
 
   export default {
     name: "Forums",
     components: {
-      Question: Question,
-      PrayForCard: PrayForCard,
-      HeaderCustom: Header,
+        Question: Question,
+        PrayForCard: PrayForCard,
+        HeaderCustom: Header,
     },
     data() {
       return {
