@@ -9,21 +9,22 @@ export const PRAYS = [
     theme: "#FFF3F8",
     comments: [
       {
-        title: 'title',
-        text: 'desc',
-        theme: '#80D8FF',
+        title: "อธิษฐานเผื่อ",
+        text: "สู้ๆนะคะ",
+        theme: "#80D8FF",
         editing: false,
       },
       {
-        title: 'title',
-        text: 'desc',
-        theme: '#80D8FF',
+        title: "อาเผื่อครับ",
+        text: "ขอพระเจ้าเสริมกำลัง",
+        theme: "#d6fcf7",
         editing: false,
       },
       {
-        title: 'title',
-        text: 'desc',
-        theme: '#80D8FF',
+        title: "พระเจ้าอวยพร",
+        text:
+          "ขอพระเจ้าอยู่ด้วย ขอพระเจ้าอยู่ด้วย ขอพระเจ้าอยู่ด้วย ขอพระเจ้าอยู่ด้วย ขอพระเจ้าอยู่ด้วย ขอพระเจ้าอยู่ด้วย ",
+        theme: "#efddf7",
         editing: false,
       },
     ],
@@ -38,8 +39,23 @@ export const PRAYS = [
     theme: "#D9FCD6",
     comments: [
       {
-        comment: "อย่าลืมอ่านหนังสือด้วยนะครับ สู้ๆ อธิษฐานเผื่อครับ",
-        by: "Sea",
+        title: "อธิษฐานเผื่อ",
+        text: "สู้ๆนะคะ",
+        theme: "#fff3f8",
+        editing: false,
+      },
+      {
+        title: "อาเผื่อครับ",
+        text: "ขอพระเจ้าเสริมกำลัง",
+        theme: "#397490",
+        editing: false,
+      },
+      {
+        title: "พระเจ้าอวยพร",
+        text:
+          "ขอพระเจ้าอยู่ด้วย ขอพระเจ้าอยู่ด้วย ขอพระเจ้าอยู่ด้วย ขอพระเจ้าอยู่ด้วย ขอพระเจ้าอยู่ด้วย ขอพระเจ้าอยู่ด้วย ",
+        theme: "#efddf7",
+        editing: false,
       },
     ],
   },
@@ -54,8 +70,23 @@ export const PRAYS = [
     theme: "#D9FCD6",
     comments: [
       {
-        comment: "อธิษฐานเผื่อค่ะ ขอให้ก้าวสี่ลุกขึ้นและก้าวห้าเต็มถัง",
-        by: "Natty",
+        title: "อธิษฐานเผื่อ",
+        text: "สู้ๆนะคะ",
+        theme: "#dae9ff",
+        editing: false,
+      },
+      {
+        title: "อาเผื่อครับ",
+        text: "ขอพระเจ้าเสริมกำลัง",
+        theme: "#d6fcf7",
+        editing: false,
+      },
+      {
+        title: "พระเจ้าอวยพร",
+        text:
+          "ขอพระเจ้าอยู่ด้วย ขอพระเจ้าอยู่ด้วย ขอพระเจ้าอยู่ด้วย ขอพระเจ้าอยู่ด้วย ขอพระเจ้าอยู่ด้วย ขอพระเจ้าอยู่ด้วย ",
+        theme: "#d9fcd6",
+        editing: false,
       },
     ],
   },
@@ -69,9 +100,23 @@ export const PRAYS = [
     theme: "#FFF5D2",
     comments: [
       {
-        comment:
-          "จงแสวงหาแผ่นดินของพระเจ้าก่อน แล้วพระเจ้าจะประทานสิ่งทั้งปวงให้ เป็นกำลังใจให้ครับ",
-        by: "Nakamol",
+        title: "อธิษฐานเผื่อ",
+        text: "สู้ๆนะคะ",
+        theme: "#fff3f8",
+        editing: false,
+      },
+      {
+        title: "อาเผื่อครับ",
+        text: "ขอพระเจ้าเสริมกำลัง",
+        theme: "#fff3f8",
+        editing: false,
+      },
+      {
+        title: "พระเจ้าอวยพร",
+        text:
+          "ขอพระเจ้าอยู่ด้วย ขอพระเจ้าอยู่ด้วย ขอพระเจ้าอยู่ด้วย ขอพระเจ้าอยู่ด้วย ขอพระเจ้าอยู่ด้วย ขอพระเจ้าอยู่ด้วย ",
+        theme: "#80D8FF",
+        editing: false,
       },
     ],
   },
