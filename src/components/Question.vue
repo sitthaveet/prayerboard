@@ -1,6 +1,7 @@
 <template>
     <section class="question">
-        <div class="row">
+        <h4>ถาม-ตอบ</h4>
+        <div class="row" style="margin-top: 40px">
             <div
                 class="topic"
                 v-for="item in topics"
@@ -8,7 +9,7 @@
                 :style="`background: ${item.color}`"
                 @click="onTopicSelected(item.id)"
             >
-                #{{item.name}}
+                <small>#{{item.name}}</small>
             </div>
         </div>
         <div class="row" style="margin-top: 40px">
