@@ -188,7 +188,7 @@ export default {
   margin-bottom: 15px;
 }
 .question-image {
-  width: 1200px;
+  width: 120px;
   position: absolute;
   bottom: 20px;
   right: 20px;
