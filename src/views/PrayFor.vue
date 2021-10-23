@@ -9,6 +9,7 @@
                 :desc="item.desc"
                 :by="item.by"
                 :avatar="item.avatar"
+                :theme="item.theme"
             />
         </div>
     </section>

@@ -1,6 +1,6 @@
 <template>
     <div
-        class="button-custom"
+        class="button-custom background-primary"
         @click="onClick"
     >
         {{name}}
