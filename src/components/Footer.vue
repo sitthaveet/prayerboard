@@ -25,8 +25,8 @@
     <div class="footer-content">
       <div class="container">
         <div class="row float-right">
-          <div class="mock-icon"></div>
-          <p>Footer ยังไม่รู้ต้องใส่อะไร</p>
+          <img src="../assets/logo-without-text.png" width="48.4" height="56" alt="logo" />
+          <p><span class="font-weight-bold text-primary">Christ Space</span> พื้นที่ปลอดภัยสำหรับคริสเตียน</p>
         </div>
       </div>
     </div>
