@@ -93,7 +93,6 @@ export default {
   #navbarSupportedContent {
     position: relative;
     justify-content: right;
-    margin-top: 2em;
   }
   
   .nav-item {
