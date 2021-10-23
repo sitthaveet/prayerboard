@@ -118,7 +118,6 @@
     mounted() {
       const id = this.$route.query.id;
       this.currentNote = PRAYS.find(pray => pray.id === +id);
-      console.log(this.currentNote);
       // if (localStorage.getItem('notes')) this.notes = JSON.parse(localStorage.getItem('notes'));
     },
     watch: {

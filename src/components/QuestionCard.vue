@@ -1,6 +1,6 @@
 <template>
     <section>
-        <div class="question background-primary">
+        <div class="question background-primary" @click="onClick">
             <h3>"{{title}}"</h3>
             <p class="desc">{{desc}}</p>
             <div class="topics">
@@ -38,7 +38,12 @@
 <script>
   export default {
     name: "QuestionCard",
-    props: ['title', 'desc', 'by', 'comments', 'topics', 'avatar'],
+    props: ['title', 'desc', 'by', 'comments', 'topics', 'avatar', 'id'],
+    methods: {
+      onClick() {
+        this.$router.push({path: 'answer', query: { id: this.id }})
+      }
+    }
   }
 </script>
 
@@ -51,6 +56,7 @@
         border-radius: 10px;
         padding: 20px;
         position: relative;
+        cursor: pointer;
     }
     .topics {
         position: absolute;

@@ -3,7 +3,7 @@
 
         <div class="note-editor" :style="`background: ${theme}`">
             <!--<input class="title-input" type="text" v-model="title" placeholder="Title">-->
-            <textarea class="border-input" rows="4" v-model="text" placeholder="พิมพ์ข้อความของคุณได้ที่นี้"></textarea>
+            <textarea class="border-input" rows="4" v-model="text" placeholder="พิมพ์ข้อความของคุณได้ที่นี่"></textarea>
             <input class="title-input border-input" type="text" v-model="name" placeholder="ใส่ชื่อของคุณ">
 
             <div class="note-editor-bottom">
@@ -26,8 +26,8 @@
             <!--<button class="add-btn" @click.prevent="createNew"><i class="fas fa-plus"></i></button>-->
             <div class="btn-submit">
                 <button-custom
-                        name="ส่งข้อความหนุนใจ"
-                        :onClick="createNew"
+                    name="ส่งข้อความหนุนใจ"
+                    :onClick="createNew"
                 />
             </div>
 

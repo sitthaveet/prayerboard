@@ -24,6 +24,7 @@
                 comments="2"
                 :by="item.by"
                 :avatar="item.avatar"
+                :id="item.id"
             />
         </div>
     </section>
