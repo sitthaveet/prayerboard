@@ -1,5 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark header fixed-top">
+    <popover-custom />
+
     <div class="container">
       <router-link :to="{ path: '/' }">
       <a class="navbar-brand" href="/">
@@ -42,7 +44,12 @@
 </template>
 
 <script>
+import Popover from "../components/Modals_Popovers/PopoverCreate.vue";
+
 export default {
+  components: {
+    PopoverCustom: Popover,
+  },
   data: function () {
     return {
       category: "",
