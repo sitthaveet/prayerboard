@@ -9,8 +9,22 @@ export const PRAYS = [
     theme: "#FFF3F8",
     comments: [
       {
-        comment: "สู้ๆครับ อธิษฐานเผื่อแล้ว",
-        by: "Mark",
+        title: 'title',
+        text: 'desc',
+        theme: '#80D8FF',
+        editing: false,
+      },
+      {
+        title: 'title',
+        text: 'desc',
+        theme: '#80D8FF',
+        editing: false,
+      },
+      {
+        title: 'title',
+        text: 'desc',
+        theme: '#80D8FF',
+        editing: false,
       },
     ],
   },
