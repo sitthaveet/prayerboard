@@ -2,12 +2,12 @@
 
 $primary: #f9a93e;
 $secondary: #397490;
-$pink: #FFF3F8;
-$green: #D9FCD6;
-$light-blue: #D6FCF7;
-$yellow: #FFF5D2;
-$purple: #EFDDF7;
-$blue: #DAE9FF;
+$pink: #fff3f8;
+$green: #d9fcd6;
+$light-blue: #d6fcf7;
+$yellow: #fff5d2;
+$purple: #efddf7;
+$blue: #dae9ff;
 
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 @import "../../node_modules/bootstrap-vue/src/index.scss";
@@ -27,6 +27,7 @@ body {
   background: #ebebeb;
   font-size: 18px;
   margin: 0;
+  padding-top: 130px;
 }
 
 .background-primary {
@@ -74,6 +75,10 @@ body {
 ::placeholder {
   color: #ccc;
   font-size: 15px;
+}
+
+.ds-a-blue {
+  color: $secondary;
 }
 
 .categories {
