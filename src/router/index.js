@@ -7,6 +7,7 @@ const StickyNote = () => import('../views/StickyNote');
 const HomePage = () => import('../views/HomePage');
 const Forums = () => import('../views/Forums');
 const Question = () => import('../components/Question');
+const PrayFor = () => import('../views/PrayFor');
 
 let router = new Router({
   mode: 'history',
@@ -33,6 +34,12 @@ let router = new Router({
       path: '/question',
       name: 'Question',
       component: Question,
+      meta: {},
+    },
+    {
+      path: '/prayfor',
+      name: 'PrayFor',
+      component: PrayFor,
       meta: {},
     },
   ]

@@ -1,6 +1,10 @@
 <template>
     <section style="margin-bottom: 20px">
         <div class="pray-for">
+            <img
+                style="width: 60px; margin-bottom: 20px"
+                :src="avatar"
+            />
             <h3>"{{title}}"</h3>
             <p>{{desc}}</p>
             <div class="pray-by">
@@ -21,7 +25,7 @@
     import Button from '../components/Button'
   export default {
     name: "PrayForCard",
-    props: ['title', 'desc', 'by'],
+    props: ['title', 'desc', 'by', 'avatar'],
     components: {
       ButtonCustom: Button
     },

@@ -4,6 +4,7 @@ export const PRAYS = [
     desc:
       "ฝากอธิษฐานเผื่อด้วยค่ะ แม่หนูเข้าโรงพยาบาล ไส้ติ่งแตกแหกทุกทางโค้ง ต้องรีบผ่าตัดรัวๆ",
     by: "Waew",
+    avatar: require('../assets/avatar/avatar-1.png'),
     comments: [
       {
         comment: "สู้ๆครับ อธิษฐานเผื่อแล้ว",
@@ -17,6 +18,7 @@ export const PRAYS = [
     desc:
       "ฝากอธิษฐานเผื่อด้วยค่ะ แม่หนูเข้าโรงพยาบาล ไส้ติ่งแตกแหกทุกทางโค้ง ต้องรีบผ่าตัดรัวๆ",
     by: "Waew",
+    avatar: require('../assets/avatar/avatar-2.png'),
     comments: [
       {
         comment: "สู้ๆครับ อธิษฐานเผื่อแล้ว",
@@ -30,6 +32,7 @@ export const PRAYS = [
     desc:
       "ฝากอธิษฐานเผื่อด้วยค่ะ แม่หนูเข้าโรงพยาบาล ไส้ติ่งแตกแหกทุกทางโค้ง ต้องรีบผ่าตัดรัวๆ",
     by: "Waew",
+    avatar: require('../assets/avatar/avatar-3.png'),
     comments: [
       {
         comment: "สู้ๆครับ อธิษฐานเผื่อแล้ว",
@@ -42,6 +45,7 @@ export const PRAYS = [
     desc:
       "ฝากอธิษฐานเผื่อด้วยค่ะ แม่หนูเข้าโรงพยาบาล ไส้ติ่งแตกแหกทุกทางโค้ง ต้องรีบผ่าตัดรัวๆ",
     by: "Waew",
+    avatar: require('../assets/avatar/avatar-4.png'),
     comments: [
       {
         comment: "สู้ๆครับ อธิษฐานเผื่อแล้ว",
