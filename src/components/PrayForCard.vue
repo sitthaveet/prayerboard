@@ -16,8 +16,8 @@
             </div>
             <div class="btn-submit">
                 <button-custom
-                        name="อธิษฐานเผื่อ"
-                        :onClick="onClick"
+                    name="อธิษฐานเผื่อ"
+                    :onClick="onClick"
                 />
             </div>
         </div>
