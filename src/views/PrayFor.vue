@@ -14,6 +14,10 @@
                 :theme="item.theme"
             />
         </div>
+        <img
+            class="create-pray-for"
+            :src="require('../assets/hack/create_pray_for.png')"
+        />
     </section>
 </template>
 
@@ -39,5 +43,12 @@
 <style lang="scss" scoped>
     .section-pray {
         padding: 100px;
+    }
+    .create-pray-for {
+        width: 300px;
+        position: fixed;
+        left: 20px;
+        bottom: 30px;
+        cursor: pointer;
     }
 </style>
