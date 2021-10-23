@@ -146,8 +146,26 @@
         name: ''
       }
     },
-    changeColor() {
-      this.theme = event.target.value;
+    methods: {
+      changeColor() {
+        this.theme = event.target.value;
+      },
+      createNew() {
+        this.prays.push({
+          id: Math.floor(Math.random() * 100),
+          title: this.title,
+          desc: this.text,
+          by: this.name,
+          theme: this.theme,
+          avatar: require("../assets/avatar/avatar-1.png"),
+          comments: [],
+        });
+        this.title = "";
+        this.text = "";
+        this.name = "";
+        this.theme = '#FFF3F8';
+        this.show = false;
+      }
     },
   mounted() {
     this.prays = PRAYS;
