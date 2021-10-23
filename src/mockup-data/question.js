@@ -11,7 +11,16 @@ export const QUESTIONS = [
         by: ''
       }
     ],
-    topic: 1,
+    topics: [
+      {
+        id: 1,
+        name: "เหนื่อยกับการมีชีวิต"
+      },
+      {
+        id: 2,
+        name: "อกหักเลิกกับแฟน"
+      }
+    ],
   },
   {
     title: "What is Lorem Ipsum?",

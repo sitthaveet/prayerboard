@@ -6,6 +6,7 @@ Vue.use(Router);
 const StickyNote = () => import('../views/StickyNote');
 const HomePage = () => import('../views/HomePage');
 const Forums = () => import('../views/Forums');
+const Question = () => import('../components/Question');
 
 let router = new Router({
   mode: 'history',
@@ -26,6 +27,12 @@ let router = new Router({
       path: '/forums',
       name: 'Forums',
       component: Forums,
+      meta: {},
+    },
+    {
+      path: '/question',
+      name: 'Question',
+      component: Question,
       meta: {},
     },
   ]

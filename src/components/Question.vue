@@ -10,13 +10,18 @@
                 #{{item.name}}
             </div>
         </div>
-        <div
-            v-for="item in questions"
-            :key="item.title"
-            style="margin-bottom: 40px; margin-top: 40px"
-        >
-            <h4>{{ item.title }}</h4>
-            <p>{{ item.desc }}</p>
+        <div class="row" style="margin-top: 40px">
+            <question-card
+                class="col-6"
+                style="margin-bottom: 20px"
+                v-for="item in questions"
+                :key="item.title"
+                :title="item.title"
+                :desc="item.desc"
+                :topics="item.topics"
+                comments="2"
+                :by="item.by"
+            />
         </div>
     </section>
 </template>
@@ -24,6 +29,7 @@
 <script>
   import {QUESTIONS} from "../mockup-data/question";
   import {TOPICS} from "../mockup-data/topic";
+  import QuestionCard from '../components/QuestionCard'
 
   export default {
     name: "Question",
@@ -45,13 +51,16 @@
         this.idSelected = id;
         this.questions = [...this.questionsAll.filter(question => question.topic === id)];
       }
+    },
+    components: {
+      QuestionCard: QuestionCard
     }
   }
 </script>
 
 <style lang="scss" scoped>
     .question {
-        padding: 40px
+        padding: 100px
     }
     .topic {
         padding: 10px;
