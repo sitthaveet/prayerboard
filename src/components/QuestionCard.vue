@@ -1,6 +1,6 @@
 <template>
     <section>
-        <div class="question">
+        <div class="question background-primary">
             <h3>"{{title}}"</h3>
             <p class="desc">{{desc}}</p>
             <div class="topics">
@@ -15,9 +15,21 @@
                 </div>
             </div>
             <div class="question-by row">
+                <img
+                    style="width: 25px; margin-right: 10px"
+                    :src="require('../assets/icons/message.png')"
+                />
                 <span>{{comments}}</span>
+                <img
+                    style="width: 25px; margin-left: 10px; margin-right: 10px"
+                    :src="avatar"
+                />
                 <span>{{by}}</span>
             </div>
+            <img
+                class="question-image"
+                :src="require('../assets/icons/question.png')"
+            />
         </div>
     </section>
 </template>
@@ -25,7 +37,7 @@
 <script>
   export default {
     name: "QuestionCard",
-    props: ['title', 'desc', 'by', 'comments', 'topics'],
+    props: ['title', 'desc', 'by', 'comments', 'topics', 'avatar'],
   }
 </script>
 
@@ -61,5 +73,11 @@
         -webkit-box-orient: vertical;
         overflow: hidden;
         text-overflow: ellipsis;
+    }
+    .question-image {
+        width: 100px;
+        position:  absolute;
+        bottom: 20px;
+        right: 20px;
     }
 </style>

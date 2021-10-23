@@ -1,5 +1,11 @@
 @import "./font.scss";
 
+$primary: #f9a93e;
+$secondary: #397490;
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../../node_modules/bootstrap-vue/src/index.scss";
+
 html {
   box-sizing: border-box;
 }
@@ -15,6 +21,10 @@ body {
   background: #ebebeb;
   font-size: 18px;
   margin: 0;
+}
+
+.background-primary {
+  background: $primary;
 }
 
 ::placeholder {
@@ -175,9 +185,3 @@ body {
   right: 25px;
   top: 25px;
 }
-
-$primary: #f9a93e;
-$secondary: #397490;
-
-@import "node_modules/bootstrap/scss/bootstrap.scss";
-@import "node_modules/bootstrap-vue/src/index.scss";

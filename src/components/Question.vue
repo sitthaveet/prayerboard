@@ -21,6 +21,7 @@
                 :topics="item.topics"
                 comments="2"
                 :by="item.by"
+                :avatar="item.avatar"
             />
         </div>
     </section>
