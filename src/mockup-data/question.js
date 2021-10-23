@@ -39,6 +39,18 @@ export const QUESTIONS = [
       }
     ],
     topic: 1,
+    topics: [
+      {
+        id: 2,
+        name: "อกหักเลิกกับแฟน",
+        color: "#F9DBE7"
+      },
+      {
+        id: 3,
+        name: "คู่พระพร",
+        color: "#CBE2F2"
+      }
+    ],
   },
   {
     title: "What is Lorem Ipsum?",
@@ -54,6 +66,18 @@ export const QUESTIONS = [
       }
     ],
     topic: 2,
+    topics: [
+      {
+        id: 3,
+        name: "คู่พระพร",
+        color: "#CBE2F2"
+      },
+      {
+        id: 4,
+        name: "เด็กจบใหม่",
+        color: "#FEC8B7"
+      }
+    ],
   },
   {
     title: "What is Lorem Ipsum?",
@@ -69,6 +93,18 @@ export const QUESTIONS = [
       }
     ],
     topic: 3,
+    topics: [
+      {
+        id: 4,
+        name: "เด็กจบใหม่",
+        color: "#FEC8B7"
+      },
+      {
+        id: 5,
+        name: "LGBTQ",
+        color: "#FFBCD8"
+      }
+    ],
   },
   {
     title: "What is Lorem Ipsum?",
@@ -84,5 +120,17 @@ export const QUESTIONS = [
       }
     ],
     topic: 4,
+    topics: [
+      {
+        id: 5,
+        name: "LGBTQ",
+        color: "#FFBCD8"
+      },
+      {
+        id: 6,
+        name: "การให้อภัยคนอื่น",
+        color: "#E0D1FF"
+      }
+    ],
   },
 ];
