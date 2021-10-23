@@ -10,5 +10,18 @@
 
 export default {
   name: 'App',
+  metaInfo() {
+    return {
+      title: "ChristSpace",
+      meta: [
+          {
+            vmid: "description",
+            name: "description",
+            content:
+              "พื้นที่ปลอดภัยสำหรับคริสเตียน"
+          }
+      ]
+    }
+}
 }
 </script>
