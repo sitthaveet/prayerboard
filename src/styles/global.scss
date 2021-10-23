@@ -195,6 +195,12 @@ body {
   border-radius: 10px;
 }
 
+.border-post {
+  border: 2px solid black;
+  border-bottom-width: 5px;
+  border-radius: 10px;
+}
+
 .note-editor-bottom {
   display: flex;
   align-items: center;

@@ -8,6 +8,7 @@ const HomePage = () => import('../views/HomePage');
 const Forums = () => import('../views/Forums');
 const Question = () => import('../components/Question');
 const PrayFor = () => import('../views/PrayFor');
+const Answer = () => import('../views/Answer');
 
 let router = new Router({
   mode: 'history',
@@ -40,6 +41,12 @@ let router = new Router({
       path: '/prayfor',
       name: 'PrayFor',
       component: PrayFor,
+      meta: {},
+    },
+    {
+      path: '/answer',
+      name: 'Answer',
+      component: Answer,
       meta: {},
     },
   ]

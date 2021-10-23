@@ -21,11 +21,16 @@
                 :title="item.title"
                 :desc="item.desc"
                 :topics="item.topics"
-                comments="2"
+                :comments="item.comments.length"
                 :by="item.by"
                 :avatar="item.avatar"
+                :id="item.id"
             />
         </div>
+        <img
+            class="create-question"
+            :src="require('../assets/hack/create_question.png')"
+        />
     </section>
 </template>
 
@@ -74,6 +79,13 @@
         background: lightgrey;
         border-radius: 40px;
         margin-left: 10px;
+        cursor: pointer;
+    }
+    .create-question {
+        width: 300px;
+        position: fixed;
+        right: 20px;
+        bottom: 30px;
         cursor: pointer;
     }
 </style>
