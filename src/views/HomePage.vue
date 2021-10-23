@@ -22,6 +22,7 @@
                 :title="item.title"
                 :desc="item.desc"
                 :by="item.by"
+                :id="item.id"
             />
           </slide>
         </carousel>
@@ -60,9 +61,10 @@
                 :title="item.title"
                 :desc="item.desc"
                 :topics="item.topics"
-                comments="2"
+                :comments="item.comments.length"
                 :by="item.by"
                 :avatar="item.avatar"
+                :id="item.id"
             />
         </div>
         <div class="d-flex justify-content-center">
