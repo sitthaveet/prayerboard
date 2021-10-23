@@ -49,7 +49,7 @@ let router = new Router({
       component: Answer,
       meta: {},
     },
-  ]
+  ],
 });
 
 export default router;

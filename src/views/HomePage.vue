@@ -1,6 +1,7 @@
 <template>
   <div>
     <header-custom />
+    <popover-custom />
 
     <section id="section-1-background-container" class="section-wrapper section">
     <div class="container">
@@ -77,6 +78,7 @@
 
 <script>
 import Header from "../components/Header.vue";
+import Popover from "../components/Modals_Popovers/PopoverCreate.vue";
 import { Carousel, Slide } from "vue-carousel";
 import PrayForCard from "../components/PrayForCard";
 import { PRAYS } from "../mockup-data/prayfor";
@@ -89,6 +91,7 @@ export default {
   name: "HomePage",
   components: {
     HeaderCustom: Header,
+    PopoverCustom: Popover,
     Carousel,
     Slide,
     PrayForCard: PrayForCard,

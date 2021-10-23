@@ -1,11 +1,13 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark header fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">
+      <router-link :to="{ path: '/' }">
+      <a class="navbar-brand" href="/">
         <img src="../assets/logo.png" width="60" height="69" alt="" />
         <!-- <div class="mock-icon"></div> -->
         <p class="web-title">hristSpace</p>
       </a>
+      </router-link>
       <button
         class="navbar-toggler"
         type="button"
@@ -19,16 +21,16 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav">
-          <li class="nav-item active">
+          <router-link tag="li" class="nav-item" :to="{ path: '/' }">
             <a class="nav-link" href="/">หน้าแรก</a>
-          </li>
-          <li class="nav-item">
+          </router-link>
+          <router-link tag="li" class="nav-item" :to="{path: 'forums', query: { id: this.id }}">
             <a class="nav-link" href="#" @click="onClickForums">ขอคำอธิษฐาน</a>
-          </li>
-          <li class="nav-item">
+          </router-link>
+          <router-link tag="li" class="nav-item" :to="{path: 'forums', query: { id: this.id }}">
             <a class="nav-link" href="#" @click="onClickForums">ถาม-ตอบ</a>
-          </li>
-          <li class="nav-item">
+          </router-link>
+          <li class="nav-item" id="popover-create" variant="primary">
             <button class="btn btn-custom-yellow my-2 my-sm-0 text-white">
               สร้างกระดานใหม่
             </button>
@@ -51,6 +53,11 @@ export default {
         this.$router.push({path: 'forums', query: { id: this.id }})
       },
   },
+  computed: {
+    currentRouteName() {
+      return this.$route.name;
+    },
+  },
 };
 </script>
 
@@ -66,6 +73,7 @@ export default {
   
   .navbar-brand {
     padding: 0.6em 0px 0.4em 0px;
+    width: 180px;
   }
   
   .navbar-dark {
@@ -122,6 +130,7 @@ export default {
     background-color: #f9a93e;
     border: #18191f solid 2px;
     border-radius: 0.6em;
+    color:black !important;
     transition: .3s;
   }
   

@@ -1,72 +1,46 @@
 <template>
-  <div class="text-center">
-    <b-button id="popover-button-open" variant="primary">Button</b-button>
-
-    <b-popover show target="popover-button-open" title="Popover">
-      I start <strong>open</strong>
+    <b-popover target="popover-create" title="" placement="bottom" class="p-4">
+      <button class="btn btn-custom-yellow2 m-3 text-white">
+              <span style="font-size:1.5em; margin-top:-.2em; position: absolute">+</span> &nbsp;&nbsp;&nbsp;ต้องการคำอธิษฐานเผื่อ
+       </button>
+       <button class="btn btn-custom-primary mx-3 mb-3 text-white">
+              <span style="font-size:1.5em; margin-top:-.2em; position: absolute">+</span> &nbsp;&nbsp;&nbsp;สร้างคำถามใหม่
+       </button>
     </b-popover>
-  </div>
 </template>
 
 <script>
-import Button from "../components/Button";
-export default {
-  data: function () {
-    return {
-      title: "",
-      chosenColor: "",
-      theme: "#FFF3F8",
-      editing: "",
-      text: "",
-      name: "",
-    };
-  },
-  props: ["notes"],
-  components: {
-    ButtonCustom: Button,
-  },
-  methods: {
-    handleSelected() {
-      this.editingNote = event.target;
-    },
-    createNew() {
-      this.$emit(
-        "noteAdded",
-        this.title,
-        this.text,
-        this.theme,
-        this.editing,
-        this.name
-      );
-      this.title = "";
-      this.text = "";
-      // this.theme = '';
-      this.name = "";
-      this.editing = false;
-    },
-    deleteNote(index) {
-      this.$emit("noteDeleted", index);
-    },
-    changeColor() {
-      this.theme = event.target.value;
-    },
-  },
-};
+
 </script>
 
 <style lang="scss" scope>
-::placeholder {
-  color: #737373;
-}
-.border-input {
-  border-radius: 10px;
-  border: 1px solid grey;
-  padding-left: 20px !important;
-  margin-bottom: 15px;
-}
-.btn-submit {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-}
+.btn-custom-yellow2 {
+    width: 215px;
+    background-color: #f9a93e;
+    border: #18191f solid 2px;
+    border-radius: 0.6em;
+    color:black !important;
+    transition: .3s;
+  }
+  
+  .btn-custom-yellow2:hover {
+    box-shadow: 2px 2px 2px rgba(0,0,0,.5);
+    color: black !important;
+    transform: translate(-1px,-1px);
+  }
+
+  .btn-custom-primary {
+    width: 215px;
+    background-color: #397490;
+    border: #18191f solid 2px;
+    border-radius: 0.6em;
+    color:white !important;
+    transition: .3s;
+  }
+
+  .btn-custom-primary:hover {
+    box-shadow: 2px 2px 2px rgba(0,0,0,.5);
+    color: black !important;
+    transform: translate(-1px,-1px);
+  }
 </style>

@@ -1,7 +1,8 @@
 <template>
   <div class="footer-section">
     <div class="container" style="position: relative">
-      <img v-if="currentRouteName == 'HomePage' ? true : false"
+      <img
+        v-if="currentRouteName == 'HomePage' ? true : false"
         class="img-man-left"
         src="../assets/images/peep-sit-1man-left.png"
         alt="not found image"
@@ -25,8 +26,16 @@
     <div class="footer-content">
       <div class="container">
         <div class="row float-right">
-          <img src="../assets/logo-without-text.png" width="48.4" height="56" alt="logo" />
-          <p><span class="font-weight-bold text-primary">Christ Space</span> พื้นที่ปลอดภัยสำหรับคริสเตียน</p>
+          <img
+            src="../assets/logo-without-text.png"
+            width="48.4"
+            height="56"
+            alt="logo"
+          />
+          <p>
+            <span class="font-weight-bold text-primary">Christ Space</span>
+            พื้นที่ปลอดภัยสำหรับคริสเตียน
+          </p>
         </div>
       </div>
     </div>
@@ -42,58 +51,58 @@ export default {
   },
   computed: {
     currentRouteName() {
-        return this.$route.name;
-    }
-}
+      return this.$route.name;
+    },
+  },
 };
 </script>
 
 <style scoped>
 .footer-section {
-    width: 100%;
-    position: relative;
-    bottom: 0px;
-    margin-top: auto;
-    margin-bottom: 0px;
+  width: 100%;
+  position: relative;
+  bottom: 0px;
+  margin-top: auto;
+  margin-bottom: 0px;
 }
 
 .footer-content {
-    padding: 1em 0px;
-    justify-content: right;
+  padding: 1em 0px;
+  justify-content: right;
 }
 
 .footer-content p {
-    margin: 1em 0em 1em 2em;
+  margin: 1em 0em 1em 2em;
 }
 
 .footer-top-extension {
-    position: relative;
-    height: 350px;
-    background-image: linear-gradient(0deg, #EB8E39, #FFE4C0);
+  position: relative;
+  height: 350px;
+  background-image: linear-gradient(0deg, #eb8e39, #ffe4c0);
 }
 
 .img-man-left {
-    position: absolute;
-    left: 0px;
-    width: 280px;
-    margin-top: 70px;
-    padding: 0px 10px;
-    z-index: 100;
+  position: absolute;
+  left: 0px;
+  width: 280px;
+  margin-top: 70px;
+  padding: 0px 10px;
+  z-index: 100;
 }
 
 .img-man-right {
-    position: absolute;
-    left: auto;
-    right: 250px;
-    width: 200px;
-    bottom: 0px;
+  position: absolute;
+  left: auto;
+  right: 250px;
+  width: 200px;
+  bottom: 0px;
 }
 
 .img-woman-right {
-    position: absolute;
-    left: auto;
-    right: 150px;
-    width: 200px;
-    bottom: 0px;
+  position: absolute;
+  left: auto;
+  right: 150px;
+  width: 200px;
+  bottom: 0px;
 }
 </style>
