@@ -10,7 +10,7 @@
             <h2>อยากให้อธิษฐานเผื่อหน่อย</h2>
           </div>
           <div class="col-6 d-flex justify-content-end align-items-center">
-            <a class ="ds-a-blue" href="#" @click="onClickForums">ดูทั้งหมด ></a>
+            <a class ="ds-a-blue cursor-pointer" @click="onClickPrayFor">ดูทั้งหมด ></a>
           </div>
       </div>
       
@@ -22,6 +22,7 @@
                 :title="item.title"
                 :desc="item.desc"
                 :by="item.by"
+                :id="item.id"
             />
           </slide>
         </carousel>
@@ -36,7 +37,7 @@
               <h2>ถาม-ตอบ</h2>
             </div>
             <div class="col-6 d-flex justify-content-end align-items-center">
-              <a class ="ds-a-blue" href="#" @click="onClickForums">ดูทั้งหมด ></a>
+              <a class ="ds-a-blue cursor-pointer" @click="onClickQuestion">ดูทั้งหมด ></a>
             </div>
         </div>
       
@@ -47,7 +48,6 @@
                 v-for="item in topics"
                 :key="item.id"
                 :style="`background: ${item.color}`"
-                @click="onTopicSelected(item.id)"
             >
                 <small>#{{item.name}}</small>
             </div>
@@ -61,13 +61,14 @@
                 :title="item.title"
                 :desc="item.desc"
                 :topics="item.topics"
-                comments="2"
+                :comments="item.comments.length"
                 :by="item.by"
                 :avatar="item.avatar"
+                :id="item.id"
             />
         </div>
         <div class="d-flex justify-content-center">
-          <button type="button" class="btn btn-outline-secondary btn-radius my-2" @click="onClickForums">ดูทั้งหมด ></button>
+          <button type="button" class="btn btn-outline-secondary btn-radius my-2" @click="onClickQuestion">ดูทั้งหมด ></button>
         </div>
       </div>
     </section>
@@ -122,8 +123,11 @@ export default {
         this.idSelected = id;
         this.questions = [...this.questionsAll.filter(question => question.topics.find(topic => topic.id === id))];
       },
-      onClickForums() {
-        this.$router.push({path: 'forums', query: { id: this.id }})
+      onClickPrayFor() {
+        this.$router.push({path: 'prayfor'})
+      },
+      onClickQuestion() {
+        this.$router.push({path: 'question'})
       }
     },
 };
@@ -154,6 +158,10 @@ export default {
 .btn-radius {
   border-radius: 40px;
   padding: 10px 20px 10px 20px;
+}
+
+.cursor-pointer {
+    cursor: pointer;
 }
 
 </style>

@@ -122,50 +122,33 @@
 </template>
 
 <script>
-import PrayForCard from "../components/PrayForCard";
-import { PRAYS } from "../mockup-data/prayfor";
-import Header from "../components/Header.vue";
-import Footer from "../components/Footer.vue";
-import Button from "../components/Button";
-export default {
-  name: "PrayFor",
-  components: {
-    PrayForCard: PrayForCard,
-    HeaderCustom: Header,
-    FooterCustom: Footer,
-    ButtonCustom: Button,
-  },
-  data() {
-    return {
-      prays: [],
-      show: false,
-      theme: "#FFF3F8",
-      editing: "",
-      text: "",
-      name: "",
-    };
-  },
-  methods: {
-    createNew() {
-      this.prays.push({
-        id: Math.floor(Math.random() * 100),
-        title: this.title,
-        desc: this.text,
-        by: this.name,
-        avatar: require("../assets/avatar/avatar-1.png"),
-        theme: this.theme,
-        comments: [],
-      });
-      this.title = "";
-      this.text = "";
-      this.name = "";
-      this.editing = false;
-      this.show = false;
+  import PrayForCard from '../components/PrayForCard'
+  import {PRAYS} from "../mockup-data/prayfor";
+  import Header from '../components/Header.vue';
+  import Footer from '../components/Footer.vue';
+  import Button from '../components/Button'
+  export default {
+    name: "PrayFor",
+    components: {
+      PrayForCard: PrayForCard,
+      HeaderCustom: Header,
+      FooterCustom: Footer,
+      ButtonCustom: Button
+    },
+    data() {
+      return {
+        prays: [],
+        show: false,
+        theme: '#FFF3F8',
+        title: '',
+        editing: '',
+        text: '',
+        name: ''
+      }
     },
     changeColor() {
       this.theme = event.target.value;
     },
-  },
   mounted() {
     this.prays = PRAYS;
   },
