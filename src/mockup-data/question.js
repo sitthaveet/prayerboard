@@ -15,11 +15,13 @@ export const QUESTIONS = [
     topics: [
       {
         id: 1,
-        name: "เหนื่อยกับการมีชีวิต"
+        name: "เหนื่อยกับการมีชีวิต",
+        color: "#CEECC9"
       },
       {
         id: 2,
-        name: "อกหักเลิกกับแฟน"
+        name: "อกหักเลิกกับแฟน",
+        color: "#F9DBE7"
       }
     ],
   },

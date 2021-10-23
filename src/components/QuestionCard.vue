@@ -8,6 +8,7 @@
                     <div
                         class="topic"
                         v-for="item in topics"
+                        :style="`background: ${item.color}`"
                         :key="item.id"
                     >
                         <small>#{{item.name}}</small>
@@ -57,7 +58,7 @@
         left: 20px;
     }
     .topic {
-        padding: 5px;
+        padding: 5px 10px 5px 10px;
         background: lightgrey;
         border-radius: 40px;
         margin-left: 10px;

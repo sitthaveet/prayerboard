@@ -5,6 +5,7 @@
                 class="topic"
                 v-for="item in topics"
                 :key="item.id"
+                :style="`background: ${item.color}`"
                 @click="onTopicSelected(item.id)"
             >
                 #{{item.name}}
@@ -64,10 +65,10 @@
         padding: 100px
     }
     .topic {
-        padding: 10px;
+        padding: 10px 20px 10px 20px;
         background: lightgrey;
         border-radius: 40px;
-        margin-left: 20px;
+        margin-left: 10px;
         cursor: pointer;
     }
 </style>
