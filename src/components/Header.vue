@@ -23,13 +23,13 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav">
-          <li class="nav-item active">
+          <li class="nav-item" :class="{active: this.$route.name === 'HomePage'}">
             <a class="nav-link" @click="onClickHome">หน้าแรก</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" :class="{active: this.$route.name === 'PrayFor'}">
             <a class="nav-link" @click="onClickPrayFor">ขอคำอธิษฐาน</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" :class="{active: this.$route.name === 'Question'}">
             <a class="nav-link" @click="onClickQuestion">ถาม-ตอบ</a>
           </li>
           <li class="nav-item">
@@ -71,6 +71,9 @@ export default {
       return this.$route.name;
     },
   },
+  mounted() {
+    console.log(this.$route.name);
+  }
 };
 </script>
 
