@@ -9,7 +9,7 @@
             <h2>อยากให้อธิษฐานเผื่อหน่อย</h2>
           </div>
           <div class="col-6 d-flex justify-content-end align-items-center">
-            <a class ="ds-a-blue" href="#">ดูทั้งหมด ></a>
+            <a class ="ds-a-blue" href="#" @click="onClickForums">ดูทั้งหมด ></a>
           </div>
       </div>
       
@@ -35,7 +35,7 @@
               <h2>ถาม-ตอบ</h2>
             </div>
             <div class="col-6 d-flex justify-content-end align-items-center">
-              <a class ="ds-a-blue" href="#">ดูทั้งหมด ></a>
+              <a class ="ds-a-blue" href="#" @click="onClickForums">ดูทั้งหมด ></a>
             </div>
         </div>
       
@@ -66,7 +66,7 @@
             />
         </div>
         <div class="d-flex justify-content-center">
-          <button type="button" class="btn btn-outline-secondary btn-radius my-2">ดูทั้งหมด ></button>
+          <button type="button" class="btn btn-outline-secondary btn-radius my-2" @click="onClickForums">ดูทั้งหมด ></button>
         </div>
       </div>
     </section>
@@ -118,6 +118,9 @@ export default {
         }
         this.idSelected = id;
         this.questions = [...this.questionsAll.filter(question => question.topics.find(topic => topic.id === id))];
+      },
+      onClickForums() {
+        this.$router.push({path: 'forums', query: { id: this.id }})
       }
     },
 };
