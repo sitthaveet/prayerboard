@@ -28,13 +28,13 @@
     import Button from '../components/Button'
   export default {
     name: "PrayForCard",
-    props: ['title', 'desc', 'by', 'avatar', 'theme'],
+    props: ['id', 'title', 'desc', 'by', 'avatar', 'theme'],
     components: {
       ButtonCustom: Button
     },
     methods: {
       onClick() {
-        this.$router.push('/note')
+        this.$router.push({path: 'note', query: { id: this.id }})
       }
     }
   }

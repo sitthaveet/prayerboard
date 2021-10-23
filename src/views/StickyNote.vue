@@ -1,13 +1,32 @@
 <template>
     <div id="app">
-        <app-note-editor @noteAdded="newNote" :notes="notes" @noteDeleted="deleteNote"></app-note-editor>
+        <div class="row" style="padding: 50px">
+            <div class="note col-6" :style="{'background-color': currentNote.theme}">
+                <h3>"{{currentNote.title}}"</h3>
+                <small>{{currentNote.desc}}</small>
+                <div class="by row">
+                    <img
+                        style="width: 60px; margin: 0 10px 20px;"
+                        :src="currentNote.avatar"
+                    />
+                    <div>
+                        <h5>{{currentNote.by}}</h5>
+                        <p>30 March, 21 ,18:30</p>
+                    </div>
+                </div>
+            </div>
+            <app-note-editor class="col-6" @noteAdded="newNote" :notes="notes" @noteDeleted="deleteNote"></app-note-editor>
+        </div>
 
         <div class="noteContainer">
             <div @click="note.editing = !note.editing" v-for="(note, index) in filteredNotes" :key="`note-${index}`" class="note" :style="{'background-color': note.theme}">
                 <div>
                     <span v-if="note.editing" @click.prevent="deleteNote(index)" class="delete"><i class="fas fa-times"></i></span>
-                    <span contenteditable="true" >{{ note.title}}</span>
+                    <!--<span contenteditable="true" >{{ note.title}}</span>-->
                     <p contenteditable="true" class="note-text">{{ note.text }}</p>
+                    <small>{{ note.name }}</small>
+                    <br>
+                    <small>30 March, 21 ,18:30</small>
                 </div>
             </div>
         </div>
@@ -17,6 +36,7 @@
 
 <script>
   import NoteEditor from '../components/NoteEditor.vue';
+  import {PRAYS} from "../mockup-data/prayfor";
 
   export default {
     name: 'StickyNote',
@@ -66,7 +86,8 @@
           //   editing: false,
           // },
         ],
-        selectedTheme: 'all'
+        selectedTheme: 'all',
+        currentNote: null
       }
     },
     computed: {
@@ -87,14 +108,17 @@
       changeCategory(newCategory) {
         this.selectedTheme = newCategory;
       },
-      newNote(title, text, theme, editing) {
-        this.notes.push({title: title, text: text, theme: theme, editing: editing});
+      newNote(title, text, theme, editing, name) {
+        this.notes.push({title: title, text: text, theme: theme, editing: editing, name: name});
       },
       deleteNote(index) {
         this.notes.splice(index, 1)
       },
     },
     mounted() {
+      const id = this.$route.query.id;
+      this.currentNote = PRAYS.find(pray => pray.id === +id);
+      console.log(this.currentNote);
       // if (localStorage.getItem('notes')) this.notes = JSON.parse(localStorage.getItem('notes'));
     },
     watch: {
@@ -114,4 +138,9 @@
 
 <style lang="scss">
     @import '../styles/global.scss';
+    .by {
+        position: absolute;
+        bottom: 0px;
+        left: 20px;
+    }
 </style>

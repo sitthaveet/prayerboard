@@ -5,6 +5,7 @@
             <pray-for-card
                 class="col-4"
                 v-for="item in prays"
+                :id="item.id"
                 :key="item.title"
                 :title="item.title"
                 :desc="item.desc"
