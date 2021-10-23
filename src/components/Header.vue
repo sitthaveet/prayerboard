@@ -1,8 +1,10 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark header fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="/">
-        <img src="../assets/logo.png" width="153" height="60" alt="logo" />
+      <a class="navbar-brand" href="#">
+        <img src="../assets/logo.png" width="60" height="69" alt="" />
+        <!-- <div class="mock-icon"></div> -->
+        <p class="web-title">hristSpace</p>
       </a>
       <button
         class="navbar-toggler"
