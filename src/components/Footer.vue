@@ -9,20 +9,22 @@
     </div>
 
     <div class="footer-top-extension">
-      <img
-        class="img-woman-right"
-        src="../assets/images/peep-05.png"
-        alt="not found image"
-      />
-      <img
-        class="img-man-right"
-        src="../assets/images/peep-07.png"
-        alt="not found image"
-      />
+      <div class="container">
+        <img
+          class="img-woman-right"
+          src="../assets/images/peep-05.png"
+          alt="not found image"
+        />
+        <img
+          class="img-man-right"
+          src="../assets/images/peep-07.png"
+          alt="not found image"
+        />
+      </div>
     </div>
     <div class="footer-content">
       <div class="container">
-        <div class="row">
+        <div class="row float-right">
           <div class="mock-icon"></div>
           <p>Footer ยังไม่รู้ต้องใส่อะไร</p>
         </div>
